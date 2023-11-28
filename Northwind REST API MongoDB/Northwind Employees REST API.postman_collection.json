@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "8a32a9cd-b77a-42f2-a836-745615b91ac6",
+		"name": "Northwind Employees REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28624935"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Oran\",\r\n    \"lastName\": \"Shakarof\",\r\n    \"username\": \"OranShak\",\r\n    \"password\": \"1234\",\r\n    \"roleId\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Bart\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get All Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/employees/5e91e29b9c08fc560ce2cf88",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"employees",
+						"5e91e29b9c08fc560ce2cf88"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"lastName\" : \"Shakarov\",\r\n    \"firstName\" : \"Oran\",\r\n    \"title\" : \"Sales Manger\", \r\n    \"birthDate\" : \"2001/07/20\", \r\n    \"country\": \"Israel\",\r\n    \"city\": \"Holon\",\r\n    \"address\": \"Zabutisky\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Full Employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"lastName\" : \"Shakarof\",\r\n    \"firstName\" : \"Oran\",\r\n    \"title\" : 1, \r\n    \"birthDate\" : \"2001/07/20\", \r\n    \"country\": \"Israel\",\r\n    \"city\": \"Tel aviv\",\r\n    \"address\": \"Zabutisky\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/employees/64db9ea63793f820779b62da",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"employees",
+						"64db9ea63793f820779b62da"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Full Employee Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"lastName\" : \"Shakarof\",\r\n    \"firstName\" : \"Oran\",\r\n    \"birthDate\" : \"2001/07/20\", \r\n    \"country\": \"Israel\",\r\n    \"city\": \"Tel Aviv\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/employees/64db9ea63793f820779b62da",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"employees",
+						"64db9ea63793f820779b62da"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6MiwiZmlyc3ROYW1lIjoiQmFydCIsImxhc3ROYW1lIjoiU2ltcHNvbiIsInVzZXJuYW1lIjoiQmFydCIsInBhc3N3b3JkIjoiMTIzNCIsInJvbGVJZCI6MX0sImlhdCI6MTY5MTM0NTgyNywiZXhwIjoxNjkxMzU2NjI3fQ.dlrvKAQvhsogx6hYwJ1M8yFbhMR63zdPNyct1KqYdm8",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.request.headers.add({ key: \"doormanKey\", value: \"I-Love-Kittens!\" });"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

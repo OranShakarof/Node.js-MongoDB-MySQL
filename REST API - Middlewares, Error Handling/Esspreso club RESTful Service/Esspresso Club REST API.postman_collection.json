@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "3f4df687-1c20-4a57-aaae-2e1b4df04caa",
+		"name": "Esspresso Club REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28624935"
+	},
+	"item": [
+		{
+			"name": "Gel All Coffees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/coffees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"coffees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gel Coffees By Intensity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/coffees/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"coffees",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Coffee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/coffees/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"coffees",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Coffee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    coffeeType: \"Nuts\",\r\n    price: 4.55,\r\n    intensity: 2\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/coffees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"coffees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Full Coffee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"coffeeType\": \"Vanilla\",\r\n    \"price\": 3.33,\r\n    \"intensity\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/coffees/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"coffees",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Partial Coffee",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"coffeeType\": \"Vanilla\",\r\n    \"price\": 3.33,\r\n    \"intensity\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/coffees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"coffees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Existing Coffee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"coffeeType\": \"Vanilla\",\r\n    \"price\": 3.33,\r\n    \"intensity\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/coffees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"coffees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
